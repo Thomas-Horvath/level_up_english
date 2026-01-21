@@ -3,8 +3,10 @@ import { course } from "@/lib/courseData";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-50">
+    <main className="min-h-screen">
       <div className="max-w-5xl mx-auto px-4 py-10">
+
+
         {/* Hero */}
         <section className="flex flex-col py-10 gap-6">
           <span className="text-sm uppercase tracking-[0.2em] text-sky-400">
@@ -43,7 +45,7 @@ export default function HomePage() {
           <ul className="grid md:grid-cols-2 gap-3 text-slate-300">
             {course.whatYouLearn.map((item) => (
               <li key={item} className="flex gap-4">
-                <span className="mt-[6px] h-2 w-2 rounded-full bg-sky-400" />
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-sky-400" />
                 <span>{item}</span>
               </li>
             ))}
