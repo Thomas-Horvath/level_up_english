@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
 :root {
-  --background: #eee;
-  --foreground: #222;
+  --background: #f8fafc; /* bg-slate-50 */
+  --foreground: #0f172a; /* text-slate-900 */
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+
+
+  .btn-green {
+    @apply inline-flex items-center justify-center
+      rounded-lg font-medium
+      transition-colors duration-200
+      focus:outline-none shadow-md m-4
+      cursor-pointer
+      relative overflow-hidden
+      tracking-wide
+      ;
+    
+  
+
+    --g1: #6cab4f; /* világosabb felül */
+    --g2: #4f8a39; /* sötétebb alul */
+  
+    background: linear-gradient(to bottom, var(--g1), var(--g2));
+    color: #fff; 
+  }
+
+  .btn-green::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.35), rgba(255,255,255,0.0) 55%);
+    pointer-events: none;
+  }
+
+  .btn-green:hover {
+    filter: brightness(1.05);
+  }
+
+
+
+ 
+  
+.btn-soft {
+    @apply inline-flex items-center justify-center
+      rounded-lg font-medium
+      transition-colors duration-200
+      bg-white text-green-800 shadow-md
+      cursor-pointer
+      inset-ring-1
+      inset-ring-green-800
+      tracking-wide;
+  }
+  .btn-soft:hover {
+    background: rgb(240, 240, 240); /* slate-50 */
+  }
+
 }
