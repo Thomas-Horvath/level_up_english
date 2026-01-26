@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { AuthProvider } from "@/context/AuthContext";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "LevelUp English - B1 to B2",
@@ -10,8 +12,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="hu">
-      <body >
+      <body className="pt-20">
+        <Navbar />
         <AuthProvider>{children}</AuthProvider>
+        <Footer />
       </body>
     </html>
   );
