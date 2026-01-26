@@ -23,16 +23,16 @@ const Navbar = () => {
 
                 {/* Center: nav links */}
                 <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-                    <Link href="#how-it-works" className="hover:text-slate-900">
+                    <Link href="/#how-it-works" className="hover:text-slate-900">
                         Hogyan működik
                     </Link>
-                    <Link href="#packages" className="hover:text-slate-900">
+                    <Link href="/#packages" className="hover:text-slate-900">
                         Csomagok
                     </Link>
-                    <Link href="#testimonials" className="hover:text-slate-900">
+                    <Link href="/#testimonials" className="hover:text-slate-900">
                         Vélemények
                     </Link>
-                    <Link href="#faq" className="hover:text-slate-900">
+                    <Link href="/#faq" className="hover:text-slate-900">
                         GYIK
                     </Link>
                 </nav>
