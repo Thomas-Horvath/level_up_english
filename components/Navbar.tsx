@@ -2,21 +2,25 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
     return (
         <header className="fixed top-0 z-50 w-full border-b border-neutral-200 bg-white/90 backdrop-blur">
-            <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+            <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 ">
 
                 {/* Left: logo */}
-                <Link href="/" className="flex items-center gap-1">
-                    <Image
-                        src="/logo.png"
-                        alt="LevelUp English logo"
-                        width={100}
-                        height={100}
-                    />
-                    <span className="text-lg font-semibold text-slate-900">
+                <Link href="/" className="h-full flex items-center justify-between gap-4">
+                    <div className="">
+                        <Image
+                            src="/logo1.png"
+                            alt="LevelUp English logo"
+                            width={101}
+                            height={100}
+                            className="h-full w-16"
+                        />
+                    </div>
+                    <span className="text-xl font-bold text-slate-900">
                         LevelUp English
                     </span>
                 </Link>
@@ -38,12 +42,12 @@ const Navbar = () => {
                 </nav>
 
                 {/* Right: CTA */}
-                <div className="hidden md:block">
+                <div className="hidden lg:block">
                     <Link href="/booking" className="btn-green ">
                         Ingyenes 15 perces konzultáció
                     </Link>
                 </div>
-
+                <GiHamburgerMenu className="md:hidden" />
             </div>
         </header>
     );
