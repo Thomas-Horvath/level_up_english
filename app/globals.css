@@ -18,7 +18,7 @@ body {
     @apply inline-flex items-center justify-center
       rounded-lg font-medium
       transition-colors duration-200
-      focus:outline-none shadow-md m-4
+      focus:outline-none shadow-md 
       cursor-pointer
       relative overflow-hidden
       tracking-wide

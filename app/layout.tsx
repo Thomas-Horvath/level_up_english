@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="hu">
-      <body className="pt-20">
+      <body>
         <Navbar />
         <AuthProvider>{children}</AuthProvider>
         <Footer />
