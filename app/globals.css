@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc; /* bg-slate-50 */
-  --foreground: #0f172a; /* text-slate-900 */
+  --background: #f8fafc;
+  /* bg-slate-50 */
+  --foreground: #0f172a;
+  /* text-slate-900 */
 }
 
 body {
@@ -15,23 +17,17 @@ body {
 
 
   .btn-green {
-    @apply inline-flex items-center justify-center
-      rounded-lg font-medium
-      transition-colors duration-200
-      focus:outline-none shadow-md 
-      cursor-pointer
-      relative overflow-hidden
-      tracking-wide
-      px-8 py-2
-      ;
-    
-  
+    @apply inline-flex items-center justify-center rounded-lg font-medium transition-colors duration-200 focus:outline-none shadow-md cursor-pointer relative overflow-hidden tracking-wide px-8 py-2;
 
-    --g1: #6cab4f; /* világosabb felül */
-    --g2: #4f8a39; /* sötétebb alul */
-  
+
+
+    --g1: #6cab4f;
+    /* világosabb felül */
+    --g2: #4f8a39;
+    /* sötétebb alul */
+
     background: linear-gradient(to bottom, var(--g1), var(--g2));
-    color: #fff; 
+    color: #fff;
   }
 
   .btn-green::before {
@@ -39,7 +35,7 @@ body {
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.35), rgba(255,255,255,0.0) 55%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.0) 55%);
     pointer-events: none;
   }
 
@@ -49,20 +45,15 @@ body {
 
 
 
- 
-  
-.btn-soft {
-    @apply inline-flex items-center justify-center
-      rounded-lg font-medium
-      transition-colors duration-200
-      bg-white text-green-800 shadow-md
-      cursor-pointer
-      inset-ring-1
-      inset-ring-green-800
-      tracking-wide;
+
+
+  .btn-soft {
+    @apply inline-flex items-center justify-center rounded-lg font-medium transition-colors duration-200 bg-white text-green-800 shadow-md cursor-pointer inset-ring-1 inset-ring-green-800 tracking-wide px-8 py-2;
   }
+
   .btn-soft:hover {
-    background: rgb(240, 240, 240); /* slate-50 */
+    background: rgb(240, 240, 240);
+    /* slate-50 */
   }
 
 }
